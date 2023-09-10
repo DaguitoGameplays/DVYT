@@ -1,8 +1,9 @@
 #Uso
 
+'''
 from dvyt import DVYT
 
-def progress(d,args):\n
+def progress(d,args):
     hola = args[0]
     adios = args[1]
     print(f"Progreso: {d['downloaded_bytes'] / d['total_bytes'] * 100:.2f}%")
@@ -18,3 +19,4 @@ for format in formatos:
 format = input("id ")
 
 dl.download(url,format,progress=progress,args=("Hola","Adios"))
+'''
