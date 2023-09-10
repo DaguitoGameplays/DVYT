@@ -1,6 +1,6 @@
 #Uso
 
-'''
+```
 from dvyt import DVYT
 
 def progress(d,args):
@@ -19,4 +19,4 @@ for format in formatos:
 format = input("id ")
 
 dl.download(url,format,progress=progress,args=("Hola","Adios"))
-'''
+```
