@@ -2,7 +2,7 @@
 
 from dvyt import DVYT
 
-def progress(d,args):
+def progress(d,args):\n
     hola = args[0]
     adios = args[1]
     print(f"Progreso: {d['downloaded_bytes'] / d['total_bytes'] * 100:.2f}%")
