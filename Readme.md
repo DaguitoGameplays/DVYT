@@ -10,12 +10,12 @@ from dvyt import DVYT
 
 dvyt = DVYT(path='ruta_personalizada')
 
-
 ## Paso 3: Obtener los formatos disponibles para un video
 
 Podemos utilizar el método get_formats para obtener los formatos disponibles. Este método recibe una URL de un video de YouTube como parámetro y devuelve una lista de formatos.
 
 url = 'https://www.youtube.com/watch?v=video_id'
+
 formatos = dvyt.get_formats(url)
 
 
@@ -24,7 +24,9 @@ formatos = dvyt.get_formats(url)
 Una vez que tengamos la lista de formatos disponibles, podemos utilizar el método download para descargar el video en un formato específico. Este método recibe la URL del video, el ID del formato deseado y dos parámetros opcionales: 'progress' y 'args'.
 
 url = 'https://www.youtube.com/watch?v=video_id'
+
 format_id = 'formato_id'
+
 dvyt.download(url, format_id)
 
 
@@ -35,10 +37,13 @@ El parámetro format_id debe ser una cadena que contenga el ID del formato que d
 Si deseamos mostrar el progreso de la descarga del video, podemos proporcionar una función de progreso como parámetro opcional en el método download. Esta función se llamará durante el proceso de descarga y nos permitirá mostrar información de progreso al usuario.
 
 def mostrar_progreso(d):
+
     print(f"Progreso: {d['downloaded_bytes'] / d['total_bytes'] * 100:.2f}%")
 
 url = 'https://www.youtube.com/watch?v=video_id'
+
 format_id = 'formato_id'
+
 dvyt.download(url, format_id, progress=mostrar_progreso)
 
 ## Paso 6: Guardar el video en una ubicación personalizada
